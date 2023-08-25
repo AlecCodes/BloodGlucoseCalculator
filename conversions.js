@@ -10,8 +10,9 @@ for (let i = 0; i <= 600; i++){
 
 let mmol_L_to_mg_dL = {}
 
-for (let i = 0.0; i < 33.4; i += 0.1){
-    mmol_L_to_mg_dL[oneDecRound(i)] = oneDecRound(oneDecRound(i) * 18.018)
+//tofixed solves our problem
+for (let i = 0; i <= 33.4; i += .1){
+    mmol_L_to_mg_dL[i.toFixed(1)] = Math.round(i * 18.018)
 }
 
 //console.log(mg_dL_to_mmol_L)
